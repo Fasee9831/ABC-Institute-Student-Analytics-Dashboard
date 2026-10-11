@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Institute — Student Analytics & Revenue Dashboard | Power BI Portfolio</title>
+  <meta name="description" content="Portfolio project by Faseeha Zulaika N. showcasing the ABC Institute Student Analytics Power BI Dashboard, featuring enrollment seasonality, course revenue, demographics, and DAX KPIs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container navbar">
+      <div class="nav-brand">
+        <div class="logo-icon">🎓</div>
+        <span>ABC Institute BI</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#showcase">Dashboard</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://github.com/Fasee9831/ABC-Institute-Student-Analytics-Dashboard" target="_blank" rel="noopener" class="btn btn-outline">GitHub Repo</a>
+        <a href="dashboard/ABC-Institute-Report.pbix" download class="btn btn-primary">Download .PBIX</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero container" id="overview">
+      <div class="hero-badge">
+        <span>⚡ Executive Data Analytics Portfolio</span>
+      </div>
+      <h1 class="hero-title">Student Analytics & Revenue Performance</h1>
+      <p class="hero-subtitle">
+        An end-to-end Power BI business intelligence solution tracking enrollment dynamics, course revenue generation, demographic cohorts, and academic certification throughput for ABC Institute.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Power BI Desktop</span>
+        <span class="tag">DAX Measures</span>
+        <span class="tag">Power Query</span>
+        <span class="tag">Data Modeling</span>
+        <span class="tag">Cyber Theme UI</span>
+        <span class="tag">Cohort Analysis</span>
+      </div>
+
+      <!-- KPI Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Total Revenue</span>
+            <div class="kpi-icon icon-revenue">₹</div>
+          </div>
+          <div class="kpi-value">₹6,877.50K</div>
+          <div class="kpi-growth">▲ 18.4% vs last year</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Total Students</span>
+            <div class="kpi-icon icon-students">👥</div>
+          </div>
+          <div class="kpi-value">772</div>
+          <div class="kpi-growth">▲ 14.7% vs last year</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Certificates Issued</span>
+            <div class="kpi-icon icon-certs">📜</div>
+          </div>
+          <div class="kpi-value">504</div>
+          <div class="kpi-growth">▲ 65.3% vs last year</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Average Fee</span>
+            <div class="kpi-icon icon-fee">📊</div>
+          </div>
+          <div class="kpi-value">₹8,909</div>
+          <div class="kpi-growth">▲ 12.5% vs last year</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Average Rating</span>
+            <div class="kpi-icon icon-rating">⭐</div>
+          </div>
+          <div class="kpi-value">4.3 / 5.0</div>
+          <div class="kpi-growth" style="color: var(--accent-amber);">Across 8 Curricula</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Showcase -->
+    <section class="container showcase" id="showcase">
+      <div class="section-head">
+        <h2>Dashboard Interface Preview</h2>
+        <p>Switch between the Executive Overview cockpit and the Curriculum view.</p>
+      </div>
+
+      <div class="tab-controls">
+        <button class="tab-btn active" data-view="overview">Executive Overview</button>
+        <button class="tab-btn" data-view="courses">Courses View</button>
+      </div>
+
+      <div class="preview-container">
+        <img id="dashboard-preview-img" src="assets/images/dashboard-overview.png" alt="ABC Institute - Executive Overview Dashboard View">
+      </div>
+
+      <div class="preview-caption">
+        <span id="view-caption">Executive Overview View: Total Revenue (₹6.88M), Student Demographics, Monthly Enrollments & Completion Gauge</span>
+        <span>Resolution: 1080p High-Fidelity Capture</span>
+      </div>
+
+      <div class="notice-box">
+        <span style="font-size: 1.5rem;">ℹ️</span>
+        <div>
+          <strong>Visual Preview Notice:</strong> This web portfolio provides high-resolution static captures of the Power BI report views. For full cross-filtering, interactive dropdown slicers (Year, City, Course), and dynamic calculation drill-downs, please download the raw <code>.pbix</code> file and open it in Power BI Desktop.
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights & Analysis Grid -->
+    <section class="container" id="insights">
+      <div class="section-head">
+        <h2>Key Data Insights & Strategic Findings</h2>
+        <p>Core quantitative takeaways supported by the verified dataset.</p>
+      </div>
+
+      <div class="content-grid">
+        <!-- Card 1: Revenue by Course -->
+        <div class="card">
+          <h3>💰 Course Revenue Concentration</h3>
+          <p>Tuition collections are heavily driven by advanced digital and video production courses. Creative software commands the highest commercial pricing power.</p>
+          <div class="rank-list">
+            <div class="rank-item">
+              <span class="rank-name">1. DaVinci Resolve</span>
+              <span class="rank-value">₹1,400K (₹1.40M)</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-name">2. Adobe After Effects</span>
+              <span class="rank-value">₹1,188K (₹1.19M)</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-name">3. Autodesk 3ds Max</span>
+              <span class="rank-value">₹1,175K (₹1.18M)</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-name">4. DCA (Diploma in Comp. Apps)</span>
+              <span class="rank-value">₹846K</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-name">5. MS Excel Mastery</span>
+              <span class="rank-value">₹781K</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Demographics -->
+        <div class="card">
+          <h3>👥 Demographic Cohort Distribution</h3>
+          <p>Analysis of student age segments indicates that early-career upskillers dominate institutional enrollments.</p>
+          <ul>
+            <li><strong>20–29 Years (52.07% | 402 Students):</strong> Primary learner cohort, consisting of college students and graduates entering digital media fields.</li>
+            <li><strong>30–39 Years (33.68% | 260 Students):</strong> Secondary major cohort of mid-career professionals upgrading software proficiencies.</li>
+            <li><strong>Above 40 Years (9.84% | 76 Students):</strong> Senior specialists and hobbyist learners.</li>
+            <li><strong>Below 20 Years (4.41% | 34 Students):</strong> School leavers and foundational learners.</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Seasonality -->
+        <div class="card">
+          <h3>📅 Intake Seasonality & Demand Swings</h3>
+          <p>Enrollment volume exhibits strong seasonality throughout the 12-month calendar year.</p>
+          <ul>
+            <li><strong>Peak Inflow (November):</strong> Reaches an all-time high of <strong>116 student enrollments</strong>, driven by end-of-year career transition commitments.</li>
+            <li><strong>Secondary Inflows:</strong> Strong batches in <strong>April (91)</strong>, <strong>August (85)</strong>, and <strong>October (78)</strong>.</li>
+            <li><strong>The February Slump:</strong> Plummets to a low of just <strong>13 enrollments</strong>, representing an 88.8% reduction from peak volume.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategic Recommendations -->
+    <section class="container" id="recommendations">
+      <div class="section-head">
+        <h2>Actionable Recommendations for Leadership</h2>
+        <p>Data-backed strategic interventions to optimize revenue and completion throughput.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="card">
+          <h3>🎯 1. Address the February Enrollment Trough</h3>
+          <p>Launch targeted "Early Starter" campaigns and bundle discounts (e.g., <em>MS Excel + DCA Career Starter</em>) during December–January to capture enrollments before the February lull.</p>
+        </div>
+
+        <div class="card">
+          <h3>🎬 2. Expand Creative & Media Offerings</h3>
+          <p>With DaVinci Resolve, After Effects, and 3ds Max accounting for over ₹3.76M in revenue, launch specialized masterclasses (Color Grading, Virtual Production) with premium tuition pricing.</p>
+        </div>
+
+        <div class="card">
+          <h3>🎓 3. Close the Certification Gap</h3>
+          <p>With 504 certificates issued out of 772 students (65.28%), establish automated mentor check-ins and project submission reminders to help the remaining 268 learners cross the graduation line.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology & Architecture -->
+    <section class="container" id="methodology">
+      <div class="section-head">
+        <h2>Analytical Methodology & Data Model</h2>
+        <p>Structured schema, clean data pipelines, and verified DAX calculations.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="card">
+          <h3>🛠️ Technical Implementation</h3>
+          <ul>
+            <li><strong>Data Modeling:</strong> Star-relational schema linking <code>Personal Details</code> and <code>Student Course Details (2)</code> via <code>Student Name</code>.</li>
+            <li><strong>Power Query (M):</strong> Data sanitization, currency type transformations, and conditional grouping for statistical age brackets.</li>
+            <li><strong>DAX Formulations:</strong> Dynamic YoY growth percentages, KPI sparkline measures, distinct student counters, and conditional formatting.</li>
+            <li><strong>Full Methodology:</strong> Read the technical documentation in <a href="docs/methodology.md" target="_blank">docs/methodology.md</a>.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🔒 Privacy & Compliance Assurance</h3>
+          <ul>
+            <li><strong>Anonymized Records:</strong> All metrics, summaries, and charts reflect aggregate cohorts without identifiable PII.</li>
+            <li><strong>Verified Calculations:</strong> Every KPI on this webpage matches the mathematical measures embedded in the Power BI model.</li>
+            <li><strong>File Integrity:</strong> The complete <code>.pbix</code> file is hosted directly in this repository for full transparency.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action Banner -->
+    <section class="container cta-banner">
+      <h2>Explore the Complete Power BI Report</h2>
+      <p>Download the production <code>.pbix</code> file or explore the Git version control repository.</p>
+      <div class="cta-actions">
+        <a href="dashboard/ABC-Institute-Report.pbix" download class="btn btn-primary">⬇️ Download ABC-Institute-Report.pbix (662 KB)</a>
+        <a href="https://github.com/Fasee9831/ABC-Institute-Student-Analytics-Dashboard" target="_blank" rel="noopener" class="btn btn-outline">📂 View GitHub Repository</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <strong>ABC Institute Student Analytics Dashboard</strong> | Developed by <strong>Faseeha Zulaika N.</strong>
+      </div>
+      <div>
+        <a href="https://github.com/Fasee9831" target="_blank" rel="noopener">GitHub: @Fasee9831</a> • MIT Licensed
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

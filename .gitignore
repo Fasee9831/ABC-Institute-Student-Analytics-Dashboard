@@ -1,0 +1,16 @@
+# Power BI temporary & cache files
+*.tmp
+*.temp
+*AutoRecovery*
+~$*
+
+# OS metadata
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.bak
